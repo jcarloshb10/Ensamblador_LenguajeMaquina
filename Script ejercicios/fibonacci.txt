@@ -1,0 +1,11 @@
+- a
+	mov ah, 1
+	mov al, 0
+	mov cx, a
+   *	mov bl, ah
+	mov bl, 0
+	mov bh, ah
+	add ah, al
+	mov al, bh
+	loop *
+ 

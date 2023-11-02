@@ -1,0 +1,9 @@
+-a100
+*	mov ah,1
+*	int 21
+	cmp al,66
+*	jnz
+	mov ah,2
+	mov dl,ah
+	int 21
+	int 20

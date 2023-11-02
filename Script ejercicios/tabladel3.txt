@@ -1,0 +1,12 @@
+a 100
+	mov cx, 7
+	mov al, 3
+	mov dl, 1
+
+*	mul dl
+	mov bl,al
+
+	inc dl
+	mov al, 3
+	loop *
+ 

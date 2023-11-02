@@ -1,0 +1,55 @@
+- a
+	mov cx, 6
+	mov dl, 41
+	mov ah, 2
+	int 21
+      *	inc dl
+	loop *
+	int 20
+- a
+	mov ah, 2
+	mov dl, 41;	A
+      *	int 21
+	inc dl
+	
+	cmp dl, 5a;	Z
+	jbe *
+	int 20
+- a
+	mov ah, 2
+	mov dl, 5a;	Z
+      *	int 21
+	inc dl
+	
+	cmp dl, 5a;	A
+	jae *
+	int 20
+
+- a
+      *	mov ah, 1;	{Guarda la entrada por
+	int 21;		{teclado en 'al'
+	cmp ac, 0d
+	jne *
+	mov ah, 2
+	mov dl, al
+	int 21
+
+-a
+	mov al, 2
+	mov bl, 2
+
+      *	mov cl, 0
+	mov cl, al
+	mul bl
+
+	cmp al, 20
+	jbe *
+
+     **	mov cl, 0
+	div bl
+	mov cl, al
+
+	cmp al, 4
+	jae **
+
+	nop

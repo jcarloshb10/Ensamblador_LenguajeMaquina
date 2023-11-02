@@ -1,0 +1,25 @@
+- a 100
+	mov cx,6
+	mov ah,2
+	mov dl, 41
+*	int 21
+	inc dl
+*	loop
+	int 20
+
+-a 100
+	mov ah,2
+	mov dl,41
+*	int 21
+	inc dl
+	cmp dl,47
+*	jbe
+	int 20
+-a 100
+	mov ah,2
+	mov dl,5a
+*	int 21
+	dec dl
+	cmp dl,41
+*	jae
+	int 20	

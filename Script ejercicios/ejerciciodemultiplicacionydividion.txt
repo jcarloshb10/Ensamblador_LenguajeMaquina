@@ -1,0 +1,15 @@
+- a 100
+	mov al,2
+	mov dl,al
+	mov dh,dl
+*	mul dl
+	mov dh,al
+	sub dh,dh
+	cmp al,20
+*	jne
+*	div dl 
+	mov dh,al	
+	sub dh,dh
+	cmp al,2
+*	jne
+	int 20
